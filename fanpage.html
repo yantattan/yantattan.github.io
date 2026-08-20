@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ryan Trahan Fan Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff8e7;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #ff6f3c;
+    }
+
+    .card {
+      background-color: white;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 5%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      background-color: #ff6f3c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e85a2a;
+    }
+
+    #funFact {
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+    }
+
+    #hearts {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Ryan Trahan Fan Page</h1>
+
+  <div class="card">
+    <p>
+      I really like Ryan Trahan because he is so down to earth, friendly,
+      and always positive. Watching his videos genuinely felt like he's just one of us, bring
+      positivity to others!
+    </p>
+
+    <button onclick="likeRyan()">Click if you like Ryan too!</button>
+    <div id="hearts"></div>
+
+    <button onclick="showFunFact()">Show me a fun fact</button>
+    <p id="funFact"></p>
+  </div>
+
+  <script>
+    let likeCount = 0;
+
+    function likeRyan() {
+      likeCount++;
+      document.getElementById("hearts").textContent =
+        "❤️".repeat(likeCount) + "  (" + likeCount + " likes)";
+    }
+
+    const funFacts = [
+      "Ryan Trahan started his channel back in high school!",
+      "He's known for his 1 penny style challenge videos.",
+      "He's travelled 50 states in 50 days, while making the series a charity for his fans",
+      "He once survived on a deserted island for content!"
+    ];
+
+    function showFunFact() {
+      const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+      document.getElementById("funFact").textContent = randomFact;
+    }
+  </script>
+
+</body>
+</html>
