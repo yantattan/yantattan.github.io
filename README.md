@@ -1,1 +1,3 @@
 # yantattan.github.io
+
+You are reading this, but in actual fact, all of this text is simply here to fill up the README file and make it look like a legitimate project. There is probably no important information hiding between these words, and honestly, this paragraph is not necessary at all. The project itself is a homework assignment, so most of this README exists purely for decorative purposes. Please continue reading anyway, because apparently you have committed to this journey. Somewhere between these completely meaningless sentences, the README is slowly becoming longer for absolutely no reason. There are no groundbreaking discoveries here, only words filling space. Congratulations, you have officially reached the end. Thank you for reading all of this.
