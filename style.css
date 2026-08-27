@@ -1,46 +1,50 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff8e7;
-    color: #333;
-    text-align: center;
-    padding: 40px;
+    font-family: sans-serif;    
+    margin: 0 10%;
 }
 
-h1 {
-    color: #ff6f3c;
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
 }
 
-.card {
-    background-color: white;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 5%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+#header {
+    gap: 1rem;
+}
+#header > img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: fill;
+    border-radius: 100%;
+}
+#bio {
+    padding: 1rem;
+    border: 1px dashed gray;
+    color: dimgray
+}
+#deliverables-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1.5rem;
 }
 
-button {
-    background-color: #ff6f3c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+.folder {
+    box-shadow: 1px 1px 4px lightgray;
+    padding: 0.75rem 1.5rem;
     border-radius: 8px;
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: #3f3f3f;
+    border: 0;
+    text-decoration: none;
+}
+.folder:hover {
     cursor: pointer;
-    margin-top: 10px;
+    background-color: lightgray;
 }
 
-button:hover {
-    background-color: #e85a2a;
-}
-
-#funFact {
-    margin-top: 15px;
-    font-style: italic;
-    color: #555;
-}
-
-#hearts {
-    font-size: 24px;
-    margin-top: 10px;
+footer {
+    margin-top: 5rem;
 }
