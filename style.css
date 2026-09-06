@@ -10,12 +10,7 @@ body {
     display: grid;
 }
 
-#header {
-    gap: 1rem;
-}
 #header > img {
-    width: 10rem;
-    height: 10rem;
     object-fit: fill;
     border-radius: 100%;
 }
@@ -41,7 +36,6 @@ body {
     text-decoration: none;
 }
 .folder:hover {
-    cursor: pointer;
     background-color: lightgray;
 }
 
