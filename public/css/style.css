@@ -10,14 +10,32 @@ body {
     display: grid;
 }
 
-#header > img {
+#profile-img-section img {
     object-fit: fill;
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
 }
+#jeff-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 1000;
+}
+
 #bio {
     padding: 1rem;
     border: 1px dashed gray;
     color: dimgray
+}
+#trigger-jeff-btn {
+    display: none;
+}
+#bio:hover #trigger-jeff-btn {
+    display: block;
+    right: 2rem;
+    bottom: 1rem;
 }
 #deliverables-grid {
     display: grid;

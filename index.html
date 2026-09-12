@@ -8,14 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
   </head>
   <body class="my-4">
     <section class="row" id="header">
-      <img class="col-2" src="img/profile.jpeg" alt="It's me" />
-      <div class="col-10">
-        <h1>Tan Yan Tat</h1>
-        <p id="bio">I cycle and swim sometimes. When I'm not, I am mostly glued to my chair, typing away on VSCode to write something like this biography</p>
+      <div class="col-2 position-relative" id="profile-img-section">
+        <img id="profile-img" src="public/img/profile.jpeg" alt="It's me" />
+        <img id="jeff-img" src="public/img/jeff.jpg" alt=":)">
+      </div>
+      
+      <div class="col-10 position-relative">
+        <h1 id="my-name">Tan Yan Tat</h1>
+        <div id="bio">
+          <p>I cycle and swim sometimes. When I'm not, I am mostly glued to my chair, typing away on VSCode to write something like this biography</p>
+          <button onclick="getJeff(this)" id="trigger-jeff-btn" class="btn btn-sm btn-outline-secondary position-absolute">:)</button>
+        </div>
       </div>
     </section>
 
@@ -49,4 +56,45 @@
 
     <footer></footer>
   </body>
+
+  <script>
+    let seenJeff = false;
+
+    async function getJeff(btn) {
+      if (!seenJeff) {
+        let confirmJeff = confirm("It's me?");
+        let body = document.querySelector('body');
+        let jeffImg = document.querySelector("#jeff-img");
+        let nameh1 = document.querySelector("#my-name");
+
+        await setTimeout(() => {
+          let oriName = nameh1.innerText;
+          let oriColor = nameh1.style.color;
+
+          jeffImg.style.display = 'block';
+          body.style.backgroundColor = 'black';
+          setTimeout(() => {
+            nameh1.innerText = "It's me";
+            nameh1.style.color = 'white';
+          }, 750);
+          setTimeout(() => {
+            jeffImg.style.height = '500%';
+            jeffImg.style.width = '500%';
+          }, 1500)
+          setTimeout(() => {
+            body.style.backgroundColor = 'white';
+            jeffImg.style.display = 'none';
+            jeffImg.style.height = '100%';
+            jeffImg.style.width = '100%';
+            nameh1.innerText = oriName;
+            nameh1.style.color = oriColor;
+          }, 1750)
+        }, 1000);
+
+        seenJeff = true;
+      } else {
+        btn.innerText = ':(';
+      }
+    }
+  </script>
 </html>
